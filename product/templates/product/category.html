@@ -1,0 +1,15 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+E-com | Category Page
+{% endblock title %}
+
+{% block content %}
+
+<h3>{{ category.title }}</h3> <hr />
+
+{% for product in category.product.all %}
+<!-- get all the list of products belonging to a category -->
+{% endfor %}
+
+{% endblock content %}

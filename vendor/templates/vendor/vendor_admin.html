@@ -1,0 +1,22 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+Vendor Admin
+{% endblock title %}
+
+{% block content %}
+<h1>Vendor Admn - {{ vendor.name }}</h1> <br />
+<a href="{% url 'add_product' %}" class="btn btn-primary">Add Products</a>
+<hr />
+
+<h2>My Products</h2>
+{% if products %}
+{% for product in products %}
+<ul>
+  Title: {{ product.title }}
+</ul>
+{% endfor %}
+{% else %}
+<h1>You dont have any products yet!</h1>
+{% endif %}
+{% endblock content %}

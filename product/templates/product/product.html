@@ -1,0 +1,29 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+E-com | Products Page
+{% endblock title %}
+
+{% block content %}
+
+{% if product.image %}
+<img src="{{ product.image.url }}" alt="product image" />
+{% endif %}
+
+<h4>{{ product.title }}, ${{ product.price }}</h4>
+
+<p>{{ product.vendor.name }}</p>
+<p>{{ product.description }}</p>
+<hr />
+
+{% if similar_products %}
+
+{% for product in similar_products %}
+<!-- list out similar products -->
+{% endfor %}
+
+{% else %}
+<h2>No Similar Products Avaliable! </h2>
+{% endif %}
+
+{% endblock content %}

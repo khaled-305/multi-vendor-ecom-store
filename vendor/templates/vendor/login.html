@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+  E-com | Login
+{% endblock title %}
+
+{% block content %}
+<h2>Login</h2>
+<hr>
+
+<form method="POST" action="">
+  {% csrf_token %}
+
+  {{ form.as_p }}
+
+  <button class="btn btn-primary shadow">Login</button>
+
+</form>
+
+{% endblock content %}

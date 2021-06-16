@@ -1,0 +1,15 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+  E-com | Welcome
+{% endblock title %}
+
+{% block content %}
+<h2>Index</h2>
+
+<div>
+  {% for product in newest_products %}
+<a href="{% url 'product' product.category.slug product.slug %}">{{ product.title }}: {{ product.price }} </a> <br />
+  {% endfor %}
+</div>
+{% endblock content %}
