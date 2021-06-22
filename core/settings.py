@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'shop',
     'vendor',
     'product',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,5 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'vendor_admin'
 LOGOUT_REDIRECT_URL = 'index'
 
+SESSION_COOKIE_AGE = 86400
+CART_SESSION_ID = 'cart'

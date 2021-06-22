@@ -16,6 +16,18 @@ E-com | Products Page
 <p>{{ product.description }}</p>
 <hr />
 
+{% if messages %}
+{% for message in messages %}
+<p>{{ message }}</p>
+{% endfor %}
+{% endif %}
+
+<form method="POST" action=".">
+    {% csrf_token %}
+    <input type="number" name="quantity" value="1" min="1" />
+    <button class="btn btn-secondary">Add to Cart</button>
+</form>
+
 {% if similar_products %}
 
 {% for product in similar_products %}
